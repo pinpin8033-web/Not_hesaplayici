@@ -36,4 +36,4 @@ Bu proje Karabük Üniversitesi not hesaplama kurallarına uygun olarak gelişti
 
 ## 🔗 Canlı Demo
 
-[GitHub Pages Linki buraya gelecek]
+[https://pinpin8033-web.github.io/Not_hesaplayici/]
