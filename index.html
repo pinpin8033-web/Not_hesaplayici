@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBÜ Not Hesaplayıcı</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>KBÜ Not Hesaplayıcı</h1>
+        
+        <form id="note-form">
+            <div class="form-group"><label for="yilIci">Vize/Ara Sınav (0-100):</label><input type="text" id="yilIci" required></div>
+            <div class="form-group"><label for="final">Final Notu (0-100):</label><input type="text" id="final"></div>
+            <div class="form-group"><label for="butunleme">Bütünleme Notu (0-100):</label><input type="text" id="butunleme"><small>Bütünleme, Final yerine kullanılır.</small></div>
+            
+            <div class="form-group">
+                <label>Devam Durumu:</label>
+                <input type="radio" id="devamVar" name="devamDurumu" value="var" checked><label for="devamVar">Devam Var</label>
+                <input type="radio" id="devamsiz" name="devamDurumu" value="devamsiz"><label for="devamsiz">Devamsız (F1)</label>
+            </div>
+            <div class="form-group">
+                <label>Genel/Bütünleme Sınavına:</label>
+                <input type="radio" id="sinavGirdim" name="sinavDurumu" value="evet" checked><label for="sinavGirdim">Evet</label>
+                <input type="radio" id="sinavGirmedim" name="sinavDurumu" value="hayir"><label for="sinavGirmedim">Hayır (F2)</label>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" id="calculate-btn">Hesapla</button>
+                <button type="button" id="reset-btn">Sıfırla</button>
+            </div>
+        </form>
+
+        <div class="card" id="result-card" style="display: none;">
+            <h2>Sonuçlar</h2>
+            <div>Başarı Notu: <span id="basari-notu"></span></div>
+            <div>Harf Notu: <span id="harf-notu"></span></div>
+            <div>Durum: <span id="durum"></span></div>
+            <p>Açıklama: <span id="aciklama"></span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
